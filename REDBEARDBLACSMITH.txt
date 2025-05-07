@@ -1,0 +1,164 @@
+﻿red-beard-blacksmith/
+├── index.html
+├── styles.css
+└── script.js  (optional, for form interaction)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red Beard Blacksmith</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Red Beard Blacksmith</h1>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Forging Excellence with Flame and Iron</h2>
+    <p>Traditional craftsmanship. Modern precision.</p>
+  </section>
+
+  <section id="services">
+    <h3>Services</h3>
+    <ul>
+      <li>⚔️ Custom Blades & Tools</li>
+      <li>🛡 Restoration & Repairs</li>
+      <li>🔥 Forging Classes & Demonstrations</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h3>Gallery</h3>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/300x200" alt="Forged blade" />
+      <img src="https://via.placeholder.com/300x200" alt="Forge workshop" />
+      <img src="https://via.placeholder.com/300x200" alt="Anvil work" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Red Beard</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Red Beard Blacksmith. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  background-color: #121212;
+  color: #fefefe;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #b22222;
+}
+
+header h1 {
+  color: #b22222;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #000;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #ff4500;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #b22222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  background: #1f1f1f;
+  color: #fefefe;
+  border: 1px solid #444;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #b22222;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background: #1a1a1a;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #b22222;
+}
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Message sent! We'll get back to you soon.");
+});
